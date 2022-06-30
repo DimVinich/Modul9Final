@@ -7,7 +7,6 @@ namespace Modul9Final
         static void Main(string[] args)
         {
             int sort;
-            string[] arrF = { "Иванов", "Петров", "Сидоров", "Козлов", "Деточкин" };
             var arrExcetion = new Exception[]
             { new MyException(), new ArgumentNullException(), new DivideByZeroException(),
                 new ArgumentOutOfRangeException(), new NotImplementedException() 

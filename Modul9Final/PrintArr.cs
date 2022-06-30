@@ -4,10 +4,11 @@ using System.Text;
 
 namespace Modul9Final
 {
-    class PrintArr
+    public class PrintArr
     {
+        string[] arrF = { "Иванов", "Петров", "Сидоров", "Козлов", "Деточкин" };
 
-        // Будет какое то событие, по которому буде печаться массив
+        // Вызов сортировки должен происходить по событию
 
     }
 }
