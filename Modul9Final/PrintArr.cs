@@ -4,11 +4,19 @@ using System.Text;
 
 namespace Modul9Final
 {
+    public delegate void GoSortArr();
+
     public class PrintArr
     {
-        string[] arrF = { "Иванов", "Петров", "Сидоров", "Козлов", "Деточкин" };
+        public void PrintArrToConsol(string[] aArray, int fSort)
+        {
+            SortStrArr sortArr = new SortStrArr();
+            sortArr.SortArr(fSort, ref aArray);
 
-        // Вызов сортировки должен происходить по событию
-
+            foreach (var toPrint in aArray)
+            {
+                Console.WriteLine(toPrint);
+            }
+        }
     }
 }

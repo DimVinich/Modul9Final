@@ -2,15 +2,20 @@
 
 namespace Modul9Final
 {
+
+    public delegate void Notify();
+
     internal class Program
     {
+
         static void Main(string[] args)
         {
-            int sort;
+            int sort = -1;
             var arrExcetion = new Exception[]
             { new MyException(), new ArgumentNullException(), new DivideByZeroException(),
                 new ArgumentOutOfRangeException(), new NotImplementedException() 
             };
+            string[] arrF = { "Иванов", "Петров", "Сидоров", "Козлов", "Деточкин" };
 
             try
             {
@@ -60,15 +65,15 @@ namespace Modul9Final
             }
             finally
             {
-                Console.WriteLine($"Работа программы завершена.");
-                Console.ReadKey();
+                Console.WriteLine($"Блок обработки исключений отработал");
             }   
 
-            // Вызов сортировки массива. По событию.
+            //      Событие , которое вызывает обработку массива.
+            
+            //PrintArr prtArray = new PrintArr();
+            //prtArray.PrintArrToConsol(arrF, sort);
 
-            // Вызов печати массива. А сортировку сделать внтури
-
-
+            Console.ReadKey();
         }
     }
 }

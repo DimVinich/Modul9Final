@@ -15,6 +15,7 @@ namespace Modul9Final
             }
             return false;
         }
+
         protected static bool NeedChangeDesc(string s1, string s2)
         {
             for (int i = 0; i < (s1.Length > s2.Length ? s2.Length : s1.Length); i++)
@@ -42,7 +43,6 @@ namespace Modul9Final
             }
         }
 
-
         public void SortDesc(ref string[] arrstr)
         {
             for (int i = 0; i < arrstr.Length - 1; i++)
@@ -60,13 +60,13 @@ namespace Modul9Final
             }
         }
 
-        public void SortArr(ref string[] arrstr, int MetodSort)
+        public void SortArr(int sort, ref string[] arrstr )
         {
-            if (MetodSort == 1)
+            if (sort == 1)
             {
                 SortAsc(ref arrstr);
             }
-            if (MetodSort == 2)
+            if (sort == 2)
             {
                 SortDesc(ref arrstr);
             }
