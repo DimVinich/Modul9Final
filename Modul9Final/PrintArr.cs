@@ -6,12 +6,10 @@ namespace Modul9Final
 {
     public delegate void GoSortArr();
 
-    public class PrintArr
+    public static class PrintArr
     {
-        public void PrintArrToConsol(string[] aArray, int fSort)
+        public static void PrintArrToConsol(string[] aArray)
         {
-            SortStrArr sortArr = new SortStrArr();
-            sortArr.SortArr(fSort, ref aArray);
 
             foreach (var toPrint in aArray)
             {

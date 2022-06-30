@@ -16,7 +16,15 @@ namespace Modul9Final
                 new ArgumentOutOfRangeException(), new NotImplementedException() 
             };
             string[] arrF = { "Иванов", "Петров", "Сидоров", "Козлов", "Деточкин" };
+            SortStrArr sortStrArr = new SortStrArr();
+            EventServer eventServer = new EventServer();
 
+            eventServer.arrToSort += sortStrArr.SortArr;
+
+            //  Вывод не сортированного массива
+            PrintArr.PrintArrToConsol(arrF);
+
+            // Ввод порядка сортировки с проверками
             try
             {
                 Console.WriteLine($"Введите порядок сортировки массива. \n 1 - Сортировка А - Я\n 2 - Сортировка Я - А");
@@ -66,14 +74,16 @@ namespace Modul9Final
             finally
             {
                 Console.WriteLine($"Блок обработки исключений отработал");
-            }   
+            }
 
-            //      Событие , которое вызывает обработку массива.
-            
-            //PrintArr prtArray = new PrintArr();
-            //prtArray.PrintArrToConsol(arrF, sort);
+            //  Вызов сортировки через событие
+
+
+            //  Вывод сортированного массива
+            PrintArr.PrintArrToConsol(arrF);
 
             Console.ReadKey();
         }
+
     }
 }
